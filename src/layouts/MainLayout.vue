@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -12,10 +12,8 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Weather App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -26,13 +24,7 @@
       content-class="bg-grey-1"
     >
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
+        <Drawer
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
@@ -47,57 +39,45 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
+import Drawer from 'src/components/Drawer.vue'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Tokyo',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'tokyo'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Yokohama',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'yokohama'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Kyoto',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: 'kyoto'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
+    title: 'Osaka',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: 'osaka'
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
+    title: 'Sapporo',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: 'sapporo'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
+    title: 'Nagoya',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'nagoya'
   }
-];
+]
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
-  data () {
+  components: { Drawer },
+  data() {
     return {
       leftDrawerOpen: false,
       essentialLinks: linksData
