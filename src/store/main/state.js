@@ -2,7 +2,8 @@ export default function () {
   return {
     categories : [],
     city: '',
-    weather: {},
+    weather: null,
+    weatherForecast: [],
     venues: []
   }
 }

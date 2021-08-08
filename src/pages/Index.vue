@@ -52,7 +52,7 @@ export default {
     '$route.params': {
       async handler(value) {
         await this.$store.dispatch('main/getWeather', value)
-        await this.$store.dispatch('main/getVenues', this.$route.params)
+        await this.$store.dispatch('main/getVenues', value)
       }
     }
   }

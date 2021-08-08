@@ -8,6 +8,9 @@ export default{
     weather(state, payload) {
         state.weather = payload
     },
+    weatherForecast(state, payload) {
+        state.weatherForecast = payload
+    },
     venues(state, payload) {
         state.venues = payload
     },

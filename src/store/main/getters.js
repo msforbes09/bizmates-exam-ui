@@ -8,6 +8,9 @@ export default {
     weather(state) {
         return state.weather
     },
+    weatherForecast(state) {
+        return state.weatherForecast
+    },
     venues(state) {
         return state.venues
     }
