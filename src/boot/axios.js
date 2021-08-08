@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
+import {Notify} from 'quasar'
 
 Vue.prototype.$axios = axios
 
@@ -11,6 +12,17 @@ axios.interceptors.response.use(
     return response.data
   },
   function(error) {
+    if(error.response.status == 400) {
+      Notify.create({
+            type: 'negative',
+            color: 'negative',
+            timeout: 1000,
+            position: 'top-right',
+            message: error.response.data.message
+          })
+
+    }
+
     return Promise.reject(error)
   }
 )

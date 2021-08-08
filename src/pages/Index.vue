@@ -19,6 +19,7 @@
           :title="venue.name"
           :address="venue.address"
           :icon="venue.category_image"
+          :id="venue.id"
         />
       </div>
     </div>

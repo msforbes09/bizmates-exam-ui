@@ -32,11 +32,7 @@
       content-class="bg-grey-1"
     >
       <q-list>
-        <Drawer
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <Drawer v-for="link in cities" :key="link.title" v-bind="link" />
       </q-list>
     </q-drawer>
 
@@ -49,43 +45,18 @@
 <script>
 import Drawer from 'src/components/Drawer.vue'
 
-const linksData = [
-  {
-    title: 'Tokyo',
-    link: 'tokyo'
-  },
-  {
-    title: 'Yokohama',
-    link: 'yokohama'
-  },
-  {
-    title: 'Kyoto',
-    link: 'kyoto'
-  },
-  {
-    title: 'Osaka',
-    link: 'osaka'
-  },
-  {
-    title: 'Sapporo',
-    link: 'sapporo'
-  },
-  {
-    title: 'Nagoya',
-    link: 'nagoya'
-  }
-]
-
 export default {
   name: 'MainLayout',
   components: { Drawer },
   data() {
     return {
-      leftDrawerOpen: false,
-      essentialLinks: linksData
+      leftDrawerOpen: false
     }
   },
   computed: {
+    cities() {
+      return this.$store.getters['main/cities']
+    },
     city() {
       return this.$store.getters['main/city'].toUpperCase()
     },

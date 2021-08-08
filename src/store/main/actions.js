@@ -37,5 +37,14 @@ export default {
         } catch (error) {
             console.log(error)
         }
+    },
+    async getVenue(context, id = '4d09895482aaa093b173d1c2') {
+        try {
+            const res = await axios.get('venue/' + id)
+
+            context.commit('venue', res.data)
+        } catch (error) {
+            console.log(error)
+        }
     }
 }

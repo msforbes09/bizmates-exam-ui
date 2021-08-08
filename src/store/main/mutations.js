@@ -14,4 +14,7 @@ export default{
     venues(state, payload) {
         state.venues = payload
     },
+    venue(state, payload) {
+        state.venue = payload
+    },
 }

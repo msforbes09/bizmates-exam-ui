@@ -1,4 +1,7 @@
 export default {
+    cities(state) {
+        return state.cities
+    },
     categories(state) {
         return state.categories
     },
@@ -13,5 +16,8 @@ export default {
     },
     venues(state) {
         return state.venues
+    },
+    venue(state) {
+        return state.venue
     }
 }
