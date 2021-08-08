@@ -1,7 +1,9 @@
 <template>
   <q-item clickable :to="link">
-    <q-item-section v-if="icon" avatar>
-      <q-icon :name="icon" />
+    <q-item-section avatar>
+      <q-avatar color="teal-3" text-color="white">{{
+        title.substring(0, 2)
+      }}</q-avatar>
     </q-item-section>
 
     <q-item-section>

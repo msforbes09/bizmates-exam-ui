@@ -44,32 +44,26 @@ import Drawer from 'src/components/Drawer.vue'
 const linksData = [
   {
     title: 'Tokyo',
-    icon: 'school',
     link: 'tokyo'
   },
   {
     title: 'Yokohama',
-    icon: 'code',
     link: 'yokohama'
   },
   {
     title: 'Kyoto',
-    icon: 'chat',
     link: 'kyoto'
   },
   {
     title: 'Osaka',
-    icon: 'record_voice_over',
     link: 'osaka'
   },
   {
     title: 'Sapporo',
-    icon: 'rss_feed',
     link: 'sapporo'
   },
   {
     title: 'Nagoya',
-    icon: 'public',
     link: 'nagoya'
   }
 ]
