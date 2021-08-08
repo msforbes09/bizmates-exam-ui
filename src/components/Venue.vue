@@ -1,13 +1,13 @@
 <template>
-  <q-card flat bordered class="my-card" style="border-color: #1876D1">
-    <q-card-section style="height: 190px">
+  <q-card bordered class="my-card" style="border-color: #1876D1">
+    <q-card-section style="height: 190px; overflow:auto;">
       <q-item>
         <q-item-section>
           <div class="text-subtitle1 text-weight-medium">{{ title }}</div>
         </q-item-section>
 
         <q-item-section avatar>
-          <q-avatar color="teal-3" size="70px">
+          <q-avatar color="primary" size="70px">
             <img :src="icon" />
           </q-avatar>
         </q-item-section>
@@ -21,13 +21,7 @@
     <q-separator color="primary" />
 
     <q-card-actions>
-      <q-btn
-        color="teal"
-        outline
-        class="full-width"
-        rounded
-        label="View Details"
-      />
+      <q-btn color="primary" class="full-width" rounded label="View Details" />
     </q-card-actions>
   </q-card>
 </template>

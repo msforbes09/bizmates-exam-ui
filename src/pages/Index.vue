@@ -1,6 +1,13 @@
 <template>
   <q-page>
-    <Search />
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <Weather />
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <Search />
+      </div>
+    </div>
 
     <div class="row">
       <div
@@ -21,13 +28,14 @@
 <script>
 import Search from 'src/components/Search.vue'
 import Venue from 'src/components/Venue.vue'
+import Weather from 'src/components/Weather.vue'
 
 export default {
   name: 'PageIndex',
-  components: { Search, Venue },
+  components: { Search, Venue, Weather },
   computed: {
     city() {
-      return this.$store.getters['main/city']
+      return this.$store.getters['main/city'].toUpperCase()
     },
     weather() {
       return this.$store.getters['main/weather']

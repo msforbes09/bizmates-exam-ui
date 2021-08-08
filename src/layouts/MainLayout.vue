@@ -14,6 +14,14 @@
         <q-toolbar-title>
           Weather App
         </q-toolbar-title>
+
+        <div v-if="weather" class="text-weight-medium">
+          <span>{{ city }}, JP: </span>
+          <span>{{ weather.feels_like }} <span>&#176;</span> C</span>
+          <q-avatar>
+            <img :src="weather.icon" />
+          </q-avatar>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -75,6 +83,14 @@ export default {
     return {
       leftDrawerOpen: false,
       essentialLinks: linksData
+    }
+  },
+  computed: {
+    city() {
+      return this.$store.getters['main/city'].toUpperCase()
+    },
+    weather() {
+      return this.$store.getters['main/weather']
     }
   }
 }

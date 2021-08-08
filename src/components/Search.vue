@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="q-pa-sm col-xs-12 col-sm-12 col-md-4">
+    <div class="q-pa-sm col-xs-12">
       <q-select
         outlined
         dense
@@ -19,7 +19,7 @@
         </template>
       </q-select>
     </div>
-    <div class="q-pa-sm col-xs-12 col-sm-12 col-md-4">
+    <div class="q-pa-sm col-xs-12">
       <q-select
         outlined
         dense
@@ -39,7 +39,7 @@
         </template>
       </q-select>
     </div>
-    <div class="q-pa-sm col-xs-12 col-sm-12 col-md-4">
+    <div class="q-pa-sm col-xs-12">
       <q-input
         outlined
         dense
