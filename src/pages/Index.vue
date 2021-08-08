@@ -1,36 +1,30 @@
 <template>
   <q-page>
     <Search />
-    <template>
-      <div class="q-pa-md row items-start q-gutter-md">
-        <q-card
-          v-for="venue in venues"
-          :key="venue.id"
-          flat
-          bordered
-          class=" my-card"
-        >
-          <q-card-section>
-            <div class="text-h6">{{ venue.name }}</div>
-          </q-card-section>
 
-          <q-separator inset />
-
-          <q-card-section>
-            <div class="text-subtitle2">{{ venue.address }}</div>
-          </q-card-section>
-        </q-card>
+    <div class="row">
+      <div
+        class="q-pa-sm col-xs-12 col-sm-6 col-md-4"
+        v-for="venue in venues"
+        :key="venue.id"
+      >
+        <Venue
+          :title="venue.name"
+          :address="venue.address"
+          :icon="venue.category_image"
+        />
       </div>
-    </template>
+    </div>
   </q-page>
 </template>
 
 <script>
 import Search from 'src/components/Search.vue'
+import Venue from 'src/components/Venue.vue'
 
 export default {
   name: 'PageIndex',
-  components: { Search },
+  components: { Search, Venue },
   computed: {
     city() {
       return this.$store.getters['main/city']
@@ -56,9 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 250px
-</style>
