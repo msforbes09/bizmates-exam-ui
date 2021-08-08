@@ -1,26 +1,44 @@
-# Travel App (ui)
+# Travel App UI
 
-A Quasar Framework app
+### Tools
 
-## Install the dependencies
-```bash
-npm install
-```
+- vuejs 2
+- quasar ^1.0.0
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+### Environment
 
-### Lint the files
-```bash
-npm run lint
-```
+- Node 14.17.0
+- NPM 6.14.13
+- quasar cli 1.2.1
 
-### Build the app for production
-```bash
-quasar build
-```
+### Setup Procedures
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://v1.quasar.dev/quasar-cli/quasar-conf-js).
+- Clone repository.
+- Install javascript libraries: `npm install`
+- Create **.env** file: `cp .env.example .env`
+- Fill up **.env** file with neccessary values:
+  - VUE_APP_API
+- Start development server: `quasar dev`
+
+### Features
+
+- City selection.
+- Available venues for selected city with category and sub-category filter.
+- Search function using keyword.
+- Display current weather for selected city.
+- Display weather forecast for the next 5 days.
+- Detailed venue display:
+  - Image
+  - Ratings
+  - Likes
+  - Contacts
+- Mobile Responsive.
+
+### Screenshots:
+
+![Web view](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/web.png)
+![Index](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/index.png)
+![Filters](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/selection.png)
+![Listing](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/listing.png)
+![Weather Forecast](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/forecast.png)
+![Details](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/details.png)

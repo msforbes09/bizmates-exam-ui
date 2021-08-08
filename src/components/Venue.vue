@@ -7,7 +7,7 @@
             <div class="text-subtitle1 text-weight-medium">{{ title }}</div>
           </q-item-section>
 
-          <q-item-section avatar>
+          <q-item-section avatar v-if="icon">
             <q-avatar color="primary" size="70px">
               <img :src="icon" />
             </q-avatar>
