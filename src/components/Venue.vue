@@ -61,6 +61,17 @@
               {{ venue.likes + ' likes' }}
             </div>
           </div>
+
+          <q-rating
+            v-if="venue.rating"
+            :value="venue.rating"
+            :max="10"
+            size="25px"
+            color="primary"
+            icon="star"
+            readonly
+            icon-half="star_half"
+          />
         </q-card-section>
 
         <q-card-section class="q-pt-none">
@@ -115,6 +126,7 @@ export default {
   methods: {
     async getDetails() {
       this.loading = true
+      this.$store.commit('main/venue', null)
       await this.$store.dispatch('main/getVenue', this.id)
       this.showDetails = true
       this.loading = false
