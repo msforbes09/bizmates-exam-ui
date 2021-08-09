@@ -34,6 +34,15 @@
   - Contacts
 - Mobile Responsive.
 
+_\* Please provide explanation on why your UI and UX implementation and code implementation is the best. And write it in readme.md and include it in your repository._
+
+- Design Concept:
+  - Minimalistic approach.
+  - Semi flat design.
+  - Minimal shadows.
+  - Color theme is based on one the most famous attraction in JAPAN:  
+    ![Mt. Fuji](https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002532/img/basic/a0002532_main.jpg)
+
 ### Screenshots:
 
 ![Web view](https://raw.githubusercontent.com/msforbes09/bizmates-exam-api/main/screenshots/web.png)
